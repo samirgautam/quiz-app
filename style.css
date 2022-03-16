@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    line-height: 2rem;
+    color: rgb(255, 255, 255);
+    background-color:rgb(110, 104, 91);
+}
+p{
+    font-size: 25px;
+}
+header{
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 25px;
+    margin: 4px;
+    line-height: 60px;
+}
+
+
+.quiz-wrapper{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.quiz-wrapper.active{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.quiz{
+
+ 
+    background-color: rgb(187, 134, 28);
+    width: 600px;
+    height: auto;
+    pointer-events: all;
+}
+ .quiz.active{
+    z-index: 5;
+    opacity: 1;
+    pointer-events:all ;
+    
+ 
+} 
+.quiz.selected{
+
+    pointer-events: none;
+} 
+
+.start.active{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.start{
+    opacity: 0;
+    pointer-events: none;
+}
+.restart{
+     z-index: 0;
+    opacity: 0; 
+   position: relative;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.restart.active{
+    z-index: 5;
+    opacity: 1;
+    position: relative;
+    top: -600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: all;
+}
+.restart p{
+    justify-content: center;
+
+    color: aqua;
+}
+
+.question{
+    background-color: rgb(145, 127, 88);
+    font-size: 20px;
+    text-transform: capitalize;
+    padding : 5px;
+    text-align: center;
+    height: 5vh;
+
+} 
+
+
+
+ul{
+    
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    height: 50vh;
+    
+}
+li{
+    height: 100vh;
+    font-size: 20px;
+   margin: 1px;
+   padding: 24px;
+  cursor: pointer;
+  border:solid 2px rgb(121, 107, 107);
+  border-radius: 25px;
+}
+
+li:hover{
+    background-color: cadetblue;
+  
+}
+
+.btn{
+
+    display: flex;
+align-items: center;
+justify-content: center;
+padding: 10px;
+margin: 10px 20px;
+
+    
+    color: rgb(226, 226, 226);
+    font-size: 32px;
+    
+    cursor: pointer;
+}
+.start-btn,.next-btn,.restart-btn{
+
+    background-color: rgb(16, 95, 95);
+    }
+    
